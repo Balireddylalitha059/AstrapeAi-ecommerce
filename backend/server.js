@@ -8,8 +8,8 @@ const PORT = process.env.PORT || 5000;
 
 // middleware
 app.use(cors({
-  origin: "http://localhost:3000",  // allow requests from frontend
-  credentials: true                 // optional, if you use cookies
+  origin: "https://astrape-ai-ecommerce.vercel.app/", // <-- put your deployed frontend URL here
+  credentials: true
 }));
 app.use(express.json());
 
