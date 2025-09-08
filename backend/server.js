@@ -3,12 +3,15 @@ const mongoose = require("mongoose");
 const cors = require("cors"); 
 require("dotenv").config();
 
-const app = express(); // initialize app first
+const app = express();
 const PORT = process.env.PORT || 5000;
 
 // middleware
 app.use(cors({
-  origin: "https://astrape-ai-ecommerce.vercel.app/", // <-- put your deployed frontend URL here
+  origin: [
+    "http://localhost:3000", 
+    "https://astrape-ai-ecommerce.vercel.app"
+  ],
   credentials: true
 }));
 app.use(express.json());
